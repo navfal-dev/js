@@ -17,7 +17,7 @@ const arr = [1, 2, 2, 4, 4, 5, 1, 3, 5, 3, 6]
 console.log(singleNumber(arr))
 
 // n,n
-var singleNumber = function (nums) {
+var singleNumber2 = function (nums) {
     let mySet = new Set();
     for (let i = 0; i < nums.length; i++) {
         if (mySet.has(nums[i])) {
@@ -30,7 +30,7 @@ var singleNumber = function (nums) {
 };
 
 // n,n
-var singleNumber = function (nums) {
+var singleNumber3 = function (nums) {
     var data = {};
 
     for (var a = 0; a < nums.length; a++) {
@@ -48,7 +48,7 @@ var singleNumber = function (nums) {
 };
 
 // nlogn
-var singleNumber = function (nums) {
+var singleNumber4 = function (nums) {
     nums.sort();
     for (let i = 1; i <= nums.length; i += 2) {
         if (i == nums.length) {
