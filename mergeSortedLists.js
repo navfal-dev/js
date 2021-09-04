@@ -1,7 +1,7 @@
 let recipeMap = new Map([
-    ['cucumber', 500],
-    ['tomatoes', 350],
-    ['onion', 50]
+	["cucumber", 500],
+	["tomatoes", 350],
+	["onion", 50],
 ]);
 
 /*
@@ -22,40 +22,39 @@ for (let entry of recipeMap) { // the same as of recipeMap.entries()
 */
 
 const mergeTwoLists = (m, n) => {
-    let p1 = 0, p2 = 0,
-        list = [];
+	let p1 = 0,
+		p2 = 0,
+		list = [];
 
-    const sizeOfList = m.length + n.length;
-    console.log(sizeOfList)
+	const sizeOfList = m.length + n.length;
+	console.log(sizeOfList);
 
-    while (list.length < sizeOfList) {
-        console.log(list)
+	while (list.length < sizeOfList) {
+		console.log(list);
 
-        // if pointers go out limit 
+		// if pointers go out limit
 
-        if (p1 >= m.length && p2 < n.length) {
-            list.push(n[p2++]);
-            continue;
-        } else if (p2 >= n.length && p1 < m.length) {
-            list.push(m[p1++]);
-            continue;
-        }
+		if (p1 >= m.length && p2 < n.length) {
+			list.push(n[p2++]);
+			continue;
+		} else if (p2 >= n.length && p1 < m.length) {
+			list.push(m[p1++]);
+			continue;
+		}
 
-        // if pointeres in limit 
+		// if pointeres in limit
 
-        if (m[p1] >= n[p2]) {
-            list.push(n[p2++]);
-        } else {
-            list.push(m[p1++]);
-        }
+		if (m[p1] >= n[p2]) {
+			list.push(n[p2++]);
+		} else {
+			list.push(m[p1++]);
+		}
+	}
 
-    }
-
-    return list;
-
+	return list;
 };
 
-const m = [1]
-const n = [2]
+const m = [1];
+const n = [2];
 
-console.log(mergeTwoLists(m, n))
+console.log(mergeTwoLists(m, n));
